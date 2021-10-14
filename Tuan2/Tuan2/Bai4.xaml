@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tuan2.Bai4">
+    <ContentPage.Content>
+        <StackLayout>
+        <Image Source="Vietnam.png" HeightRequest="100" WidthRequest="200" Margin="20"></Image>
+            <ListView x:Name="listLocation" RowHeight="100" SeparatorColor="YellowGreen" ItemSelected="listLocation_ItemSelected">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding cityImg}" Grid.Row="0" Grid.Column="0"></Image>
+                            <Label Text="{Binding cityName}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="Large" VerticalOptions="Center"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

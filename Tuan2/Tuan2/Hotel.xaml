@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tuan2.Hotel">
+    <ContentPage.Content>
+        <ListView x:Name="listHotel" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                               
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding hotelImg}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HeightRequest="100" WidthRequest="100" ></Image>
+                            <Label Text="{Binding hotelName}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="Large" VerticalOptions="Start"></Label>
+                            <Label Text="{Binding hotelAddress}" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center"></Label>
+                            <Label Text="{Binding hotelIntro}" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" FontSize="28" VerticalOptions="End"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
