@@ -64,7 +64,7 @@ namespace Tuan2
                     hotelID = "HCM02",
                     hotelName = "HCM UIT",
                     hotelAddress = "56 Hai Bà Trưng Street, Q.1, HCM",
-                    hotelIntro = "Trung tâm thủ đô Hà nội",
+                    hotelIntro = "Hiện đại, chất lượng hàng đầu",
                     hotelImg = "hanoi.jpg",
 
                 });
